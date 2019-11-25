@@ -1,0 +1,6 @@
+nl:
+  budgets:
+    investments:
+      form:
+        edit_permission: "Je moet zelf het idee hebben ingediend om het te kunnen bewerken."
+        updated_notice: "Je idee is aangepast."
