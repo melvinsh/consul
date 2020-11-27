@@ -23,7 +23,11 @@
       <div class="margin-top ballot-content">
         <div class="subtitle">
           <h3>
-            <%= group.name %> - <%= @ballot.heading_for_group(group).name %>
+            <% if group.headings.count > 1 %>
+              <%= group.name %> - <%= @ballot.heading_for_group(group).name %>
+            <% else %>
+              <%= @ballot.heading_for_group(group).name %>
+            <% end %>
           </h3>
           <%= link_to sanitize(t("budgets.ballots.show.remaining",
                       amount: @ballot.formatted_amount_available(@ballot.heading_for_group(group)))),
