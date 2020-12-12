@@ -1,21 +1,11 @@
-# Use Ruby 2.3.8 as base image
-FROM ruby:2.3.8
+# Use Ruby 2.4.9 as base image
+FROM ruby:2.4.9
 
 ENV DEBIAN_FRONTEND noninteractive
 
 # Install essential Linux packages
 RUN apt-get update -qq
 RUN apt-get install -y build-essential libpq-dev postgresql-client nodejs imagemagick sudo libxss1 libappindicator1 libindicator7 unzip memcached
-
-# Files created inside the container repect the ownership
-RUN adduser --shell /bin/bash --disabled-password --gecos "" consul \
-  && adduser consul sudo \
-  && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
-
-RUN echo 'Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bundle/bin"' > /etc/sudoers.d/secure_path
-RUN chmod 0440 /etc/sudoers.d/secure_path
-
-COPY scripts/entrypoint.sh /usr/local/bin/entrypoint.sh
 
 # Define where our application will live inside the image
 ENV RAILS_ROOT /var/www/consul
