@@ -535,7 +535,7 @@ nl:
         pages: Aangepaste pagina's
         images: Aangepaste afbeeldingen
         content_blocks: Custom content blocks
-        information_texts: Aangepaste informatie teksten
+        information_texts: Aangepaste informatieteksten
         information_texts_menu:
           debates: "Discussie"
           community: "Community"

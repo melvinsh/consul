@@ -92,6 +92,8 @@ class I18nContent < ApplicationRecord
       legislation.processes.index.section_footer.description
       budgets.index.section_footer.title
       budgets.index.section_footer.description
+      devise_views.users.registrations.new.terms
+      devise_views.users.registrations.new.terms_link
     ]
   end
 end

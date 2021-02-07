@@ -439,7 +439,7 @@ nl:
         documents: "Documenten"
         images: "(Afbeeldingen) huisstijl"
         content_blocks: "Aangepaste blokken"
-        information_texts: "Informatie teksten"
+        information_texts: "Informatieteksten"
         information_texts_menu:
           basic: "Systeemmeldingen"
           proposals: "Initiatieven"
